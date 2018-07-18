@@ -5,6 +5,8 @@
 Simple Web app allowing you to create fraudulent images that
 look like real player quotes from Bleacher Report.
 
+[Try it Live](https://thosakwe.github.io/fake_bleacher_report/)
+
 ## Usage
 1. Click either the background image or headshot. A dialog
 will pop up allowing you to select an image.
