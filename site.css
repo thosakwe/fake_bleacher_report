@@ -148,4 +148,9 @@ textarea {
     #backdrop, #backdrop-overlay {
         height: 15em;
     }
+
+    #logo {
+        margin-right: 0.5em;
+        margin-top: 1em;
+    }
 }
