@@ -12,6 +12,30 @@ html, body {
     padding: 0 10em;
 }
 
+input {
+    display: none;
+}
+
+textarea {
+    border: none;
+    font-family: 'Effra';
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    position: relative;
+    resize: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    width: fill-available;
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+}
+
+#avatar, #backdrop, #backdrop-overlay {
+    cursor: pointer;
+}
+
 #avatar {
     height: 7em;
     width: 7em;
@@ -48,27 +72,12 @@ html, body {
 }
 
 #logo {
-    padding: 5px 3px;
-    position: fixed;
     border: 3px solid black;
     bottom: 1em;
+    cursor: pointer;
+    padding: 5px 3px;
+    position: fixed;
     right: 1em;
-}
-
-textarea {
-    border: none;
-    font-family: 'Effra';
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: hidden;
-    position: relative;
-    resize: none;
-    text-align: center;
-    text-transform: uppercase;
-    width: 100%;
-    width: fill-available;
-    width: -webkit-fill-available;
-    width: -moz-fill-available;
 }
 
 #subtitle {

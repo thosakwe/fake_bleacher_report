@@ -18,12 +18,42 @@
         <div id="avatar"></div>
         <textarea id="title" autofocus>"Wait, we were up?"</textarea>
         <textarea id="subtitle">J.R. Smith when asked about Game 1 ending</textarea>
+        <input id="files" type="file" accept="image/*">
     </div>
     <script>
         var backdrop = document.querySelector('#backdrop');
         var avatar = document.querySelector('#avatar');
+        var files = document.querySelector('#files');
+        var logo = document.querySelector('#logo');
+        document.querySelector('#backdrop-overlay').onclick = clickHandler('#backdrop');
+        backdrop.onclick = clickHandler('#backdrop');
         backdrop.style.backgroundImage = "url('" + 'https://www.nbcsports.com/bayarea/sites/csnbayarea/files/styles/article_hero_image/public/2018/06/01/smithjr.jpg?itok=fPgDaZkW' + "')";
         avatar.style.backgroundImage = "url('" + 'https://i.ytimg.com/vi/73AX8npuKPY/maxresdefault.jpg' + "')";
+        avatar.onclick = clickHandler('#avatar');
+
+        function clickHandler(query) {
+            return function (e) {
+                files.onchange = function () {
+                    if (files.files.length) {
+                        var file = files.files[0];
+                        var rdr = new FileReader();
+
+                        rdr.onerror = function (e) {
+                            alert('Oops! Something went wrong.');
+                        };
+
+                        rdr.onload = function () {
+                            console.info(rdr.result);
+                            document.querySelector(query).style.backgroundImage = "url('" + rdr.result + "')";
+                        };
+
+                        rdr.readAsDataURL(file);
+                    }
+                };
+
+                files.click();
+            };
+        }
     </script>
 </body>
 
