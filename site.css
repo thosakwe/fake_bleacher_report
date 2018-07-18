@@ -13,7 +13,7 @@ html, body {
 }
 
 hr {
-    width: 3em;
+    width: 3em !important;
     margin-top: -3px;
 }
 
