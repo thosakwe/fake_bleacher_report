@@ -14,6 +14,13 @@ html, body {
 
 input {
     display: none;
+    visibility: hidden;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
 }
 
 textarea {
