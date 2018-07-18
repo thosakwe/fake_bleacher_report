@@ -135,6 +135,10 @@ textarea {
     padding: 0.2em;
 }
 
+.adsbygoogle {
+    margin-top: 2em;
+}
+
 @media only screen and (max-width: 1000px) {
     html, body {
         overflow-x: hidden;
